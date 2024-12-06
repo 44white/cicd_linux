@@ -35,4 +35,4 @@ jobs:
         run: docker build -t dweblab/songdo .
       
       - name: Push docker image
-        run: sudo docker push dweblab/songdo:latest
+        run: docker push dweblab/songdo:latest

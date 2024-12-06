@@ -27,9 +27,9 @@ jobs:
       
       - name: Login to Docker Hub         # 도커허브에 로그인해라
         uses: docker/login-action@v3
-        #with:
-          #username: ${{ secrets.DOCKERHUB_USERNAME }}  # 시크릿 키
-          #password: ${{ secrets.DOCKERHUB_TOKEN }}
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}  # 시크릿 키
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
       
       - name: Build Docker image
         run: docker build -t dweblab/songdo .
